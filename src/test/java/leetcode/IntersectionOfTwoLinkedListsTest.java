@@ -1,4 +1,4 @@
-package codility.lessons.leetcode;
+package leetcode;
 
 import leetcode.IntersectionOfTwoLinkedLists;
 import leetcode.ListNode;

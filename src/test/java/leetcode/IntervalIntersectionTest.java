@@ -1,4 +1,4 @@
-package codility.lessons.leetcode;
+package leetcode;
 
 import leetcode.IntervalIntersection;
 import static org.junit.jupiter.api.Assertions.*;
