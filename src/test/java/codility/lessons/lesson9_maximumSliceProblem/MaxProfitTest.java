@@ -50,4 +50,11 @@ class MaxProfitTest {
         int actual = maxProfit.findMaxProfit(A);
         assertEquals(expected, actual);
     }
+    @Test
+    void findMaxProfit_impossibleToGainProfit_returnsZero(){
+        int[] A = {300, 2};
+        int expected = 0;
+        int actual = maxProfit.findMaxProfit(A);
+        assertEquals(expected, actual);
+    }
 }
