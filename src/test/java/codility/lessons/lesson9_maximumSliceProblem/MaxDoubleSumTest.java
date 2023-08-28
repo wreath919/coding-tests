@@ -22,7 +22,7 @@ class MaxDoubleSumTest {
         assertEquals(expected, actual);
     }
     @Test
-    void findSumOfDoubleSlices_allNegativeElements_returns17(){
+    void findSumOfDoubleSlices_allNegativeElements_returnsZero(){
         int[] A = {-3, -2, -6, -1, -4, -5, -1, -2};
         int expected = 0;
         int actual = maxDoubleSum.findSumOfDoubleSlices(A);
