@@ -24,7 +24,7 @@ class CacheTest {
     void test_firstOne_cacheMiss(){
         int n = 1;
         boolean expected = false;
-        boolean actual = cache.getFromCache(n);
+        boolean actual = cache.isInCache(n);
         assertEquals(expected, actual);
 
         List<Integer> expectedList = new LinkedList<>(List.of(1));
@@ -39,14 +39,14 @@ class CacheTest {
     @Test
     void test_secondOne_cacheHit(){
         int n = 1;
-        cache.getFromCache(n);
+        cache.isInCache(n);
 
         n = 2;
-        cache.getFromCache(n);
+        cache.isInCache(n);
 
         n = 1;
         boolean expected = true;
-        boolean actual = cache.getFromCache(n);
+        boolean actual = cache.isInCache(n);
         assertEquals(expected, actual);
 
         List<Integer> expectedList = new LinkedList<>(List.of(2, 1));
@@ -61,20 +61,20 @@ class CacheTest {
     @Test
     void test_pushOutNumber_cacheMiss(){
         int n = 1;
-        cache.getFromCache(n);
+        cache.isInCache(n);
 
         n = 2;
-        cache.getFromCache(n);
+        cache.isInCache(n);
 
         n = 1;
-        cache.getFromCache(n);
+        cache.isInCache(n);
 
         n = 3;
-        cache.getFromCache(n);
+        cache.isInCache(n);
 
         n = 4;
         boolean expected = false;
-        boolean actual = cache.getFromCache(n);
+        boolean actual = cache.isInCache(n);
         assertEquals(expected, actual);
 
         List<Integer> expectedList = new LinkedList<>(List.of(1, 3, 4));

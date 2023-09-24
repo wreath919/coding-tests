@@ -5,19 +5,19 @@ public class Cache {
 
     private LinkedList<Integer> linkedList = new LinkedList<>();
 
-    public boolean getFromCache(int n){
+    public boolean isInCache(int n){
+        boolean isInCache = false;
 
+        int cacheSize = 3;
         if(linkedList.contains(n)){
             linkedList.remove((Integer) n);
-            linkedList.add(n);
-            return true;
-        } else {
-            if(linkedList.size() >= 3){
-                linkedList.remove(0);
-            }
-            linkedList.add(n);
-            return false;
+            isInCache = true;
+        } else if(linkedList.size() >= cacheSize){
+            linkedList.remove();
         }
+
+        linkedList.add(n);
+        return isInCache;
     }
 
     public LinkedList<Integer> getLinkedList(){
